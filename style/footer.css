@@ -1,0 +1,8 @@
+.index_footer{
+    border: none;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(255, 122, 144);
+
+    border-radius: 35px 35px 0px 0px;
+}
