@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
     overflow-y: scroll;
-    background-color: rgba(255, 255, 255, 0.815)
+    background-color: rgba(255, 255, 255, 0.726)
 }
 video{
     position: absolute;
@@ -31,6 +31,74 @@ video{
     align-items: center;
     margin: 10px 0px;
 
+}
+.batidos{
+    border: 1px solid white;
+    width: 100%;
+    height: 90%;
+    background-color:rgba(255, 255, 255, 0.521);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.batidos>div{
+    width: 300px;
+    height: 380px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options{
+    border: 1px solid black;
+    height: 50px;
+    width: 200px;
+    align-self: center;
+    justify-self:flex-start;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.img_batido img{
+    width: 100%;
+    height: 100%;
+}
+.options span{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    height: 20px;
+    width: 20px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.options img{
+    height: 50px;
+    width: 40px;
+    border: 1px solid black;
+}
+.description_batido{
+    display: flex;
+    height: 150px;
+    width: 100%;
+    border: 1px solid red;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+}
+.description_batido h3{
+    color: rgb(155, 10, 34);
+    text-shadow: 1px 1px 1px black;
+}
+.description_batido p{
+    width: 100%;
+    color: rgb(173, 15, 76);
+    text-shadow: 1px 1px 1px black;
 }
 .description{
     min-height: 150px;

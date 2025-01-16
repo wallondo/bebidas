@@ -114,6 +114,7 @@
 .sabores .div_sabores > div> span img{
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 
 .carrinho{

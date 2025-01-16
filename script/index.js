@@ -4,6 +4,7 @@ var types = document.getElementById("types");
 var carrinho = document.getElementById("carrinho");
 var carrinho_quant = document.getElementById("carrinho_quant");
 var qtd = document.getElementById("qtd")
+var sabores = [...document.querySelectorAll(".sabores")]
 var tipo = "";
 var carrinhos = [];
 //630/1029
@@ -202,6 +203,31 @@ var sem_alcool = [
     }
 ];
 var seach_bebida = [];
+function sabor(params){
+    if(params=="uva"){
+        main.innerHTML=`
+            	<h3>Batidos</h3>
+        `;
+        
+    }else  if(params=="limao"){
+        console.log("limao");
+    }else if(params=="maca"){
+        console.log("maca");
+    }else if(params=="manga"){
+        console.log("manga");
+    }else if(params=="ananas"){
+        console.log("ananas");
+    }else if(params=="morango"){
+        console.log("morango");
+    }   
+}
+sabores.map((ele,pos)=>{
+    ele.addEventListener("click",(evt)=>{
+        sabor(evt.target.alt)
+    })
+})
+
+
 function tipos(params){
     if(tipo=="sem_alcool"){
         main.innerHTML="";
@@ -396,4 +422,4 @@ const menos = (elemento)=>{
     console.log(id);
 
 }
-tipos();
+// tipos();
