@@ -85,13 +85,12 @@ video{
     display: flex;
     height: 150px;
     width: 100%;
-    border: 1px solid red;
     flex-direction: column;
     justify-content: space-around;
     align-self: center;
     align-items: center;
 }
-.description_batido h3{
+/* .description_batido h3{
     color: rgb(155, 10, 34);
     text-shadow: 1px 1px 1px black;
 }
@@ -99,7 +98,7 @@ video{
     width: 100%;
     color: rgb(173, 15, 76);
     text-shadow: 1px 1px 1px black;
-}
+} */
 .description{
     min-height: 150px;
     height: 90%;

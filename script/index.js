@@ -14,7 +14,7 @@ var bebida = [
         tipo:"sem_alcool",
         frase:" A mais refrescante gasificada bebida para si. Não perca mais tempo eencomende agora",
         preco:"1.000",
-        img:"../public/bebidas/cocacola1.png",
+        img:"public/bebidas/cocacola1.png",
         desc:"A melhor com.....",
         sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
@@ -25,7 +25,7 @@ var bebida = [
         tipo:"sem_alcool",
         frase:"Das mais concorridas do mercado até aos dias de hoje",
         preco:"900",
-        img:"../public/bebidas/sprite1.png",
+        img:"public/bebidas/sprite1.png",
         desc:"A melhor com.....",
         sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
@@ -36,7 +36,7 @@ var bebida = [
         tipo:"sem_alcool",
         frase:"Refrescante, Zero açucar, gasificada e muito mais",
         preco:"750",
-        img:"../public/bebidas/pepsi1.png",
+        img:"public/bebidas/pepsi1.png",
         desc:"A melhor com.....",
         sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
@@ -47,7 +47,7 @@ var bebida = [
         tipo:"sem_alcool",
         frase:"Com o toque especial de laranja para adoçar o teu dia",
         preco:"750",
-        img:"../public/bebidas/fanta.png",
+        img:"public/bebidas/fanta.png",
         desc:"A melhor com.....",
         sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
@@ -58,7 +58,7 @@ var bebida = [
         tipo:"sem_alcool",
         frase:"Com o toque especial de Maça , nutricional , idratante , ati-oxidante e refrescante",
         preco:"750",
-        img:"../public/bebidas/fanta_maca.png",
+        img:"public/bebidas/fanta_maca.png",
         desc:"A melhor com.....",
         sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
