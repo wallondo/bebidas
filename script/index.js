@@ -208,36 +208,42 @@ var batidos = {
         b_a3:"b_a3.jpg",
         b_a4:"b_a4.jpg",
         b_a5:"b_a5.jpg",
+        b_atxt:"Ananás",
 
         b_l1:"b_l1.jpg",
         b_l2:"b_l2.jpg",
         b_l3:"b_l3.jpg",
         b_l4:"b_l4.jpg",
         b_l5:"b_l5.jpg",
+        b_ltxt:"Limão",
 
         b_m1:"b_m1.jpg",
         b_m2:"b_m2.jpg",
         b_m3:"b_m3.jpg",
         b_m4:"b_m4.jpg",
         b_m5:"b_m5.jpg",
+        b_mtxt:"Morango",
 
         b_ma1:"b_ma1.jpg",
         b_ma2:"b_ma2.jpg",
         b_ma3:"b_ma3.jpg",
         b_ma4:"b_ma4.jpg",
         b_ma5:"b_ma5.jpg",
+        b_matxt:"Manga",
 
         b_mac1:"b_mac1.jpg",
         b_mac2:"b_mac2.jpg",
         b_mac3:"b_mac3.jpg",
         b_mac4:"b_mac4.jpg",
         b_mac5:"b_mac5.jpg",
+        b_mactxt:"Maçã",
 
         b_u1:"b_u1.jpg",
         b_u2:"b_u2.jpg",
         b_u3:"b_u3.jpg",
         b_u4:"b_u4.jpg",
         b_u5:"b_u5.jpg",
+        b_utxt:"Uva",
     
     };
 var xx = [
@@ -266,7 +272,7 @@ function sabor(params){
                         </div>
                         <div>
                             <div class=description_batido>
-                                <h3>O Melhor batido de morango</h3>
+                                <h3>O Melhor batido de ${batidos.b_atxt}</h3>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur, 
                                     adipisicing elit. Quaerat asperiores blanditiis,
@@ -297,7 +303,7 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de morango</h3>
+                      <h3>O Melhor batido de  ${batidos.b_ltxt}</h3>
                       <p>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
@@ -328,7 +334,7 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de morango</h3>
+                      <h3>O Melhor batido de ${batidos.b_mactxt}</h3>
                       <p>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
@@ -359,7 +365,7 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de morango</h3>
+                      <h3>O Melhor batido de  ${batidos.b_matxt}</h3>
                       <p>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
@@ -390,7 +396,7 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de morango</h3>
+                      <h3>O Melhor batido de  ${batidos.b_utxt}</h3>
                       <p>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
@@ -421,7 +427,7 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de morango</h3>
+                      <h3>O Melhor batido de  ${batidos.b_mtxt}</h3>
                       <p>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
