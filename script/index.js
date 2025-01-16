@@ -1,143 +1,69 @@
 var search = document.getElementById("search");
-var main = document.getElementById("index_main");
+var main = document.getElementById("section_main");
 var types = document.getElementById("types");
 var carrinho = document.getElementById("carrinho");
 var carrinho_quant = document.getElementById("carrinho_quant");
 var qtd = document.getElementById("qtd")
 var tipo = "";
 var carrinhos = [];
+//630/1029
 var bebida = [
     {   
-        nome:"Fanta",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"manga",
-                id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
         nome:"Cocacola",
         tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
+        frase:" A mais refrescante gasificada bebida para si. Não perca mais tempo eencomende agora",
+        preco:"1.000",
+        img:"../public/bebidas/cocacola1.png",
         desc:"A melhor com.....",
-        sabor:"banana",
-        id:Math.round(Math.random()*10000000000*1000000000)
-    },
-    {
-        nome:"Zimp",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Uva",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Speed",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-                id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Top",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Sprite",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
+        sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
 
     },
     {   
-        nome:"Booster",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
+        nome:"Sprite",
+        tipo:"sem_alcool",
+        frase:"Das mais concorridas do mercado até aos dias de hoje",
+        preco:"900",
+        img:"../public/bebidas/sprite1.png",
         desc:"A melhor com.....",
         sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
 
     },
-    {
-        nome:"Tigra",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"banana",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Booster",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Uva",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"SmiNof",
+    {   
+        nome:"Pepsi",
         tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
+        frase:"Refrescante, Zero açucar, gasificada e muito mais",
+        preco:"750",
+        img:"../public/bebidas/pepsi1.png",
         desc:"A melhor com.....",
-        sabor:"Pera",
+        sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
 
     },
-    {
-        nome:"GiM",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        tipo:"alcool",
-        preco:23.34,
-        img:"/",
+    {   
+        nome:"Fanta de Laranja",
+        tipo:"sem_alcool",
+        frase:"Com o toque especial de laranja para adoçar o teu dia",
+        preco:"750",
+        img:"../public/bebidas/fanta.png",
         desc:"A melhor com.....",
-        sabor:"Pera",
+        sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
 
     },
-    {
-        nome:"Milk",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
+    {   
+        nome:"Fanta de Maçã",
+        tipo:"sem_alcool",
+        frase:"Com o toque especial de Maça , nutricional , idratante , ati-oxidante e refrescante",
+        preco:"750",
+        img:"../public/bebidas/fanta_maca.png",
         desc:"A melhor com.....",
-        sabor:"Pera",
+        sabor:"manga",
         id:Math.round(Math.random()*10000000000*1000000000)
 
-    }
+    },
+
 ];
 var alcool = [
     {   

@@ -5,10 +5,10 @@
 }
 
 body{
-    background-color: rgba(247, 142, 159, 0.288);
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 .carrinho{
     cursor: pointer;
