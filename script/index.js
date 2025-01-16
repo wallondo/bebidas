@@ -202,23 +202,240 @@ var sem_alcool = [
 
     }
 ];
+var batidos = {
+        b_a1:"b_a1.jpg",
+        b_a2:"b_a2.jpg",
+        b_a3:"b_a3.jpg",
+        b_a4:"b_a4.jpg",
+        b_a5:"b_a5.jpg",
+
+        b_l1:"b_l1.jpg",
+        b_l2:"b_l2.jpg",
+        b_l3:"b_l3.jpg",
+        b_l4:"b_l4.jpg",
+        b_l5:"b_l5.jpg",
+
+        b_m1:"b_m1.jpg",
+        b_m2:"b_m2.jpg",
+        b_m3:"b_m3.jpg",
+        b_m4:"b_m4.jpg",
+        b_m5:"b_m5.jpg",
+
+        b_ma1:"b_ma1.jpg",
+        b_ma2:"b_ma2.jpg",
+        b_ma3:"b_ma3.jpg",
+        b_ma4:"b_ma4.jpg",
+        b_ma5:"b_ma5.jpg",
+
+        b_mac1:"b_mac1.jpg",
+        b_mac2:"b_mac2.jpg",
+        b_mac3:"b_mac3.jpg",
+        b_mac4:"b_mac4.jpg",
+        b_mac5:"b_mac5.jpg",
+
+        b_u1:"b_u1.jpg",
+        b_u2:"b_u2.jpg",
+        b_u3:"b_u3.jpg",
+        b_u4:"b_u4.jpg",
+        b_u5:"b_u5.jpg",
+    
+    };
+var xx = [
+    {
+        b_a2:"b_a2.jpg",
+        b_a3:"b_a3.jpg",
+        b_a4:"b_a4.jpg",
+        b_a5:"b_a5.jpg",
+    },
+];
 var seach_bebida = [];
 function sabor(params){
-    if(params=="uva"){
+    if(params=="ananas"){
         main.innerHTML=`
-            	<h3>Batidos</h3>
+            	  <section class=batidos>
+                        <div>
+                            <div class=options>
+                                <img src=public/bebidas/${batidos.b_a2} alt=>
+                                <img src=public/bebidas/${batidos.b_a3} alt=>
+                                <img src=public/bebidas/${batidos.b_a4} alt=>
+                                <img src=public/bebidas/${batidos.b_a5} alt=>
+                            </div>
+                        </div>
+                        <div class=img_batido>
+                            <img src=public/bebidas/${batidos.b_a1} alt= srcset=>
+                        </div>
+                        <div>
+                            <div class=description_batido>
+                                <h3>O Melhor batido de morango</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, 
+                                    adipisicing elit. Quaerat asperiores blanditiis,
+                                    facere tempora totam excepturi eligendi molestias tempore rerum.
+                                </p>
+                                <div class=bts_batidos>
+                                    <button>+</button>
+                                        <h3>0</h3>
+                                    <button>-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
         `;
-        
     }else  if(params=="limao"){
-        console.log("limao");
+        main.innerHTML=`
+        <section class=batidos>
+              <div>
+                  <div class=options>
+                      <img src=public/bebidas/${batidos.b_l2} alt=>
+                      <img src=public/bebidas/${batidos.b_l3} alt=>
+                      <img src=public/bebidas/${batidos.b_l4} alt=>
+                      <img src=public/bebidas/${batidos.b_l5} alt=>
+                  </div>
+              </div>
+              <div class=img_batido>
+                  <img src=public/bebidas/${batidos.b_l1} alt= srcset=>
+              </div>
+              <div>
+                  <div class=description_batido>
+                      <h3>O Melhor batido de morango</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur, 
+                          adipisicing elit. Quaerat asperiores blanditiis,
+                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                      </p>
+                      <div class=bts_batidos>
+                          <button>+</button>
+                              <h3>0</h3>
+                          <button>-</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+`;
     }else if(params=="maca"){
-        console.log("maca");
+        main.innerHTML=`
+        <section class=batidos>
+              <div>
+                  <div class=options>
+                      <img src=public/bebidas/${batidos.b_mac2} alt=>
+                      <img src=public/bebidas/${batidos.b_mac3} alt=>
+                      <img src=public/bebidas/${batidos.b_mac4} alt=>
+                      <img src=public/bebidas/${batidos.b_mac5} alt=>
+                  </div>
+              </div>
+              <div class=img_batido>
+                  <img src=public/bebidas/${batidos.b_mac1} alt=>
+              </div>
+              <div>
+                  <div class=description_batido>
+                      <h3>O Melhor batido de morango</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur, 
+                          adipisicing elit. Quaerat asperiores blanditiis,
+                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                      </p>
+                      <div class=bts_batidos>
+                          <button>+</button>
+                              <h3>0</h3>
+                          <button>-</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        `;
     }else if(params=="manga"){
-        console.log("manga");
-    }else if(params=="ananas"){
-        console.log("ananas");
+        main.innerHTML=`
+        <section class=batidos>
+              <div>
+                  <div class=options>
+                      <img src=public/bebidas/${batidos.b_ma2} alt=>
+                      <img src=public/bebidas/${batidos.b_ma3} alt=>
+                      <img src=public/bebidas/${batidos.b_ma4} alt=>
+                      <img src=public/bebidas/${batidos.b_ma5} alt=>
+                  </div>
+              </div>
+              <div class=img_batido>
+                  <img src=public/bebidas/${batidos.b_ma1} alt= srcset=>
+              </div>
+              <div>
+                  <div class=description_batido>
+                      <h3>O Melhor batido de morango</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur, 
+                          adipisicing elit. Quaerat asperiores blanditiis,
+                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                      </p>
+                      <div class=bts_batidos>
+                          <button>+</button>
+                              <h3>0</h3>
+                          <button>-</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        `;
+    }else if(params=="uva"){
+        main.innerHTML=`
+        <section class=batidos>
+              <div>
+                  <div class=options>
+                      <img src=public/bebidas/${batidos.b_u2} alt=>
+                      <img src=public/bebidas/${batidos.b_u3} alt=>
+                      <img src=public/bebidas/${batidos.b_u4} alt=>
+                      <img src=public/bebidas/${batidos.b_u5} alt=>
+                  </div>
+              </div>
+              <div class=img_batido>
+                  <img src=public/bebidas/${batidos.b_u1} alt= srcset=>
+              </div>
+              <div>
+                  <div class=description_batido>
+                      <h3>O Melhor batido de morango</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur, 
+                          adipisicing elit. Quaerat asperiores blanditiis,
+                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                      </p>
+                      <div class=bts_batidos>
+                          <button>+</button>
+                              <h3>0</h3>
+                          <button>-</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        `;
     }else if(params=="morango"){
-        console.log("morango");
+        main.innerHTML=`
+        <section class=batidos>
+              <div>
+                  <div class=options>
+                      <img src=public/bebidas/${batidos.b_m2} alt=>
+                      <img src=public/bebidas/${batidos.b_m3} alt=>
+                      <img src=public/bebidas/${batidos.b_m4} alt=>
+                      <img src=public/bebidas/${batidos.b_m5} alt=>
+                  </div>
+              </div>
+              <div class=img_batido>
+                  <img src=public/bebidas/${batidos.b_m1} alt= srcset=>
+              </div>
+              <div>
+                  <div class=description_batido>
+                      <h3>O Melhor batido de morango</h3>
+                      <p>
+                          Lorem ipsum dolor sit amet consectetur, 
+                          adipisicing elit. Quaerat asperiores blanditiis,
+                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                      </p>
+                      <div class=bts_batidos>
+                          <button>+</button>
+                              <h3>0</h3>
+                          <button>-</button>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        `;
     }   
 }
 sabores.map((ele,pos)=>{
@@ -422,4 +639,4 @@ const menos = (elemento)=>{
     console.log(id);
 
 }
-// tipos();
+tipos();
