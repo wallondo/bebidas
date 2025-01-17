@@ -65,142 +65,79 @@ var bebida = [
 
     },
 
+    {   
+        nome:"SMIRNOFF",
+        tipo:"alcool",
+        frase:" Smirnof, com baixa consentração de alcool e ideal para lazer em família e amigos",
+        preco:23.34,
+        img:"public/bebidas/smi1.png",
+        desc:"A melhor com.....",
+        sabor:"manga",
+        id:Math.round(Math.random()*10000000000*1000000000)
+
+    },
+    {
+        nome:"RAD LABEL",
+        tipo:"alcool",
+        frase:" RAD LABEL, chick, resuzente, elegante e totalmente da pura e refinada mercadoria para os de alta class",
+        preco:23.34,
+        img:"public/bebidas/leb1.png",
+        desc:"A melhor com.....",
+        sabor:"banana",
+        id:Math.round(Math.random()*10000000000*1000000000)
+
+    },
+    {
+        nome:"HEINEKEN",
+        tipo:"alcool",
+        frase:" HEINEKEN , a bebida top estrela para os Top...",
+        preco:23.34,
+        img:"public/bebidas/hei1.png",
+        desc:"A melhor com.....",
+        sabor:"Uva",
+        id:Math.round(Math.random()*10000000000*1000000000)
+
+    },
+    {
+        nome:"ANTARTICA",
+        tipo:"alcool",
+        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
+        preco:23.34,
+        img:"public/bebidas/ant1.png",
+        desc:"A melhor com.....",
+        sabor:"Pera",
+        id:Math.round(Math.random()*10000000000*1000000000)
+
+    },
+    {
+        nome:"SKYY",
+        frase:" Direito para o cêu com a SKYY  dentre as mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
+        tipo:"alcool",
+        preco:23.34,
+        img:"public/bebidas/sky1.png",
+        desc:"A melhor com.....",
+        sabor:"Pera",
+        id:Math.round(Math.random()*10000000000*1000000000)
+
+    },
+    {
+        nome:"JACK DANIELS",
+        tipo:"alcool",
+        frase:" JACK DANIELS Elegância e refrescante de todas e com o doce de manga , desfrute do que tu mereces",
+        preco:23.34,
+        img:"public/bebidas/jack1.png",
+        desc:"A melhor com.....",
+        sabor:"Pera",
+        id:Math.round(Math.random()*10000000000*1000000000)
+
+    },
+
 ];
 var alcool = [
-    {   
-        nome:"Booster",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"manga",
-        id:Math.round(Math.random()*10000000000*1000000000)
 
-    },
-    {
-        nome:"Tigra",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"banana",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Booster",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Uva",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"SmiNof",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"GiM",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        tipo:"alcool",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Milk",
-        tipo:"alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    }
 ];
 var sem_alcool = [
-    {   
-        nome:"Fanta",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"manga",
-                id:Math.round(Math.random()*10000000000*1000000000)
 
-    },
-    {
-        nome:"Cocacola",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"banana",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Zimp",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Uva",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Speed",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-                id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Top",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    },
-    {
-        nome:"Sprite",
-        tipo:"sem_alcool",
-        frase:" A mais refrescante de todas e com o doce de manga , desfrute do que tu mereces",
-        preco:23.34,
-        img:"/",
-        desc:"A melhor com.....",
-        sabor:"Pera",
-        id:Math.round(Math.random()*10000000000*1000000000)
-
-    }
 ];
 var batidos = {
         b_a1:"b_a1.jpg",
@@ -272,16 +209,16 @@ function sabor(params){
                         </div>
                         <div>
                             <div class=description_batido>
-                                <h3>O Melhor batido de ${batidos.b_atxt}</h3>
-                                <p>
+                                <h3 style='color:rgb(236, 240, 6)'>O Melhor batido de ${batidos.b_atxt}</h3>
+                                <p style='color:rgb(209, 165, 22)'>
                                     Lorem ipsum dolor sit amet consectetur, 
                                     adipisicing elit. Quaerat asperiores blanditiis,
                                     facere tempora totam excepturi eligendi molestias tempore rerum.
                                 </p>
                                 <div class=bts_batidos>
-                                    <button>+</button>
+                                    <button style='background-color:rgb(109, 107, 3)'>+</button>
                                         <h3>0</h3>
-                                    <button>-</button>
+                                    <button style='background-color:rgb(109, 107, 3)'>-</button>
                                 </div>
                             </div>
                         </div>
@@ -303,16 +240,16 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de  ${batidos.b_ltxt}</h3>
-                      <p>
+                      <h3 style='color: rgb(168, 231, 21)'>O Melhor batido de  ${batidos.b_ltxt}</h3>
+                      <p style='color:rgb(90, 99, 5)'>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
                           facere tempora totam excepturi eligendi molestias tempore rerum.
                       </p>
                       <div class=bts_batidos>
-                          <button>+</button>
+                          <button style='background-color: rgb(73, 85, 3)'>+</button>
                               <h3>0</h3>
-                          <button>-</button>
+                          <button style='background-color: rgb(73, 85, 3)'>-</button>
                       </div>
                   </div>
               </div>
@@ -334,16 +271,16 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de ${batidos.b_mactxt}</h3>
-                      <p>
+                      <h3 style='color: rgb(81, 231, 21)'>O Melhor batido de ${batidos.b_mactxt}</h3>
+                      <p style='color: rgb(13, 99, 5)'>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
                           facere tempora totam excepturi eligendi molestias tempore rerum.
                       </p>
                       <div class=bts_batidos>
-                          <button>+</button>
+                          <button style='background-color: rgb(9, 46, 2)'>+</button>
                               <h3>0</h3>
-                          <button>-</button>
+                          <button style='background-color: rgb(9, 46, 2)'>-</button>
                       </div>
                   </div>
               </div>
@@ -365,16 +302,16 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de  ${batidos.b_matxt}</h3>
-                      <p>
+                      <h3 style='color: rgb(231, 182, 21)'>O Melhor batido de  ${batidos.b_matxt}</h3>
+                      <p style='color: rgb(99, 92, 5)'>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
                           facere tempora totam excepturi eligendi molestias tempore rerum.
                       </p>
                       <div class=bts_batidos>
-                          <button>+</button>
+                          <button style='background-color: rgb(59, 56, 2)'>+</button>
                               <h3>0</h3>
-                          <button>-</button>
+                          <button style='background-color: rgb(59, 56, 2)'>-</button>
                       </div>
                   </div>
               </div>
@@ -396,16 +333,16 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de  ${batidos.b_utxt}</h3>
-                      <p>
+                      <h3 style='color: rgb(3, 12, 90)'>O Melhor batido de  ${batidos.b_utxt}</h3>
+                      <p style='color: rgb(3, 17, 77)'>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
                           facere tempora totam excepturi eligendi molestias tempore rerum.
                       </p>
                       <div class=bts_batidos>
-                          <button>+</button>
+                          <button style='background-color: rgb(6, 1, 44)'>+</button>
                               <h3>0</h3>
-                          <button>-</button>
+                          <button style='background-color: rgb(6, 1, 44)'>-</button>
                       </div>
                   </div>
               </div>
@@ -427,16 +364,16 @@ function sabor(params){
               </div>
               <div>
                   <div class=description_batido>
-                      <h3>O Melhor batido de  ${batidos.b_mtxt}</h3>
-                      <p>
+                      <h3 style='color: rgb(245, 39, 73)'>O Melhor batido de  ${batidos.b_mtxt}</h3>
+                      <p style='color: rgb(119, 6, 6)'>
                           Lorem ipsum dolor sit amet consectetur, 
                           adipisicing elit. Quaerat asperiores blanditiis,
                           facere tempora totam excepturi eligendi molestias tempore rerum.
                       </p>
                       <div class=bts_batidos>
-                          <button>+</button>
+                          <button style='background-color: rgb(43, 3, 3)'>+</button>
                               <h3>0</h3>
-                          <button>-</button>
+                          <button style='background-color: rgb(43, 3, 3)'>-</button>
                       </div>
                   </div>
               </div>
@@ -453,6 +390,13 @@ sabores.map((ele,pos)=>{
 
 function tipos(params){
     if(tipo=="sem_alcool"){
+        bebida.filter((beb,pos)=>{
+            if(beb.tipo=="sem_alcool"){
+                sem_alcool.unshift(beb)
+            }else{
+                
+            }
+        })
         main.innerHTML="";
         sem_alcool.map((ele,pos)=>{
             main.innerHTML+=`<div class="drink">
@@ -475,6 +419,13 @@ function tipos(params){
         `; 
         })
     }else if(tipo=="alcool"){
+        bebida.filter((beb,pos)=>{
+            if(beb.tipo=="alcool"){
+                alcool.unshift(beb)
+            }else{
+                
+            }
+        })
         main.innerHTML="";
         alcool.map((ele,pos)=>{
             main.innerHTML+=`<div class="drink">
@@ -598,7 +549,10 @@ types.addEventListener("change",(evt)=>{
     if(evt.target.value!=""){
         tipo = evt.target.value;
         tipos();
+        // types.setAttribute("value","Escolher")
+        tipo=""
     }
+
 })
 carrinho.addEventListener("click",()=>{
     console.log(carrinhos)
@@ -642,7 +596,22 @@ const mais = (elemento)=>{
 const menos = (elemento)=>{
     let id = elemento.target.dataset.id;
     let quantidade = elemento.target.parentNode.firstElementChild.nextElementSibling.nextElementSibling;
-    console.log(id);
+    console.log();
+    if(!carrinhos.length<1){
+        console.log(carrinhos)
+
+       let item = carrinhos.find(ele=>ele.id==id)
+       if(item){
+        item.quant--
+        quantidade.innerHTML=item.quant;
+        if(item.quant<1){
+        let fora = carrinhos.findIndex(ele=>ele.id==item.id)
+            carrinhos.splice(fora,1)
+            quantidade.innerHTML=0;
+            comprar()
+        }
+       }
+    }
 
 }
 tipos();
