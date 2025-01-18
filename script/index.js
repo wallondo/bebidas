@@ -7,6 +7,7 @@ var qtd = document.getElementById("qtd")
 var sabores = [...document.querySelectorAll(".sabores")]
 var tipo = "";
 var carrinhos = [];
+var carrinho_tela = document.getElementById("carrinho_tela")
 //630/1029
 var bebida = [
     {   
@@ -387,6 +388,29 @@ sabores.map((ele,pos)=>{
     })
 })
 
+function carrinho_mostra(){
+    console.log(carrinhos)
+    carrinho_tela.innerHTML="";
+    if(carrinhos.length<1){
+        alert("O seu carrinho está vazio")
+    }else{
+        carrinho_tela.classList.toggle("mostra")
+        carrinhos.map((ele,pos)=>{carrinho_tela.innerHTML+=`
+              <div class="itens">
+                                <h2>${ele.bebida}</h2>
+                                <div class="item_img">
+                                    <img src=${ele.img} alt="" srcset="">
+                                </div>
+                                <h3>${ele.quant}</h3>
+                                <h3>Sabor a ${ele.sabor}</h3>
+                                <p>
+                                   ${ele.desc}
+                                </p>
+                        </div>
+        `;
+        })
+    }
+}
 
 function tipos(params){
     if(tipo=="sem_alcool"){
@@ -409,8 +433,7 @@ function tipos(params){
                 </p>
                 <div>
                     <h3><span>${ele.preco}</span>.00kz</h3>
-                    <button onclick=menos(${ele.id})>-</button><h3 id=qtd>0</h3><button  onclick=mais(${ele.id})>+</button>
-                </div>
+                   <button onclick=menos(event) data-id=${ele.id}>-</button><h3 id=qtd  data-id=${ele.id}>0</h3><button  onclick=mais(event) data-id=${ele.id}>+</button>                </div>
             </div>
                 <div class="drink_img">
                 <img src=${ele.img}>
@@ -438,8 +461,7 @@ function tipos(params){
                 </p>
                 <div>
                     <h3><span>${ele.preco}</span>.00kz</h3>
-                    <button onclick=menos(${ele.id})>-</button><h3 id=qtd>0</h3><button  onclick=mais(${ele.id})>+</button>
-                </div>
+                   <button onclick=menos(event) data-id=${ele.id}>-</button><h3 id=qtd  data-id=${ele.id}>0</h3><button  onclick=mais(event) data-id=${ele.id}>+</button>                </div>
             </div>
                 <div class="drink_img">
                 <img src=${ele.img}>
@@ -555,7 +577,7 @@ types.addEventListener("change",(evt)=>{
 
 })
 carrinho.addEventListener("click",()=>{
-    console.log(carrinhos)
+    carrinho_mostra()
 })
 function  comprar(){
     carrinho_quant.innerText = carrinhos.length;
