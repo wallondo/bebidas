@@ -649,14 +649,22 @@ const mais = (elemento)=>{
 const menos = (elemento)=>{
     let id = elemento.target.dataset.id;
     let quantidade = elemento.target.parentNode.firstElementChild.nextElementSibling.nextElementSibling;
-    console.log();
+    var spans = document.querySelectorAll(".description h3")
+    let h3 = null;
+    spans.forEach((sp,po)=>{
+        if(sp.dataset.id==id){
+            h3 = sp
+        }
+    })
     if(!carrinhos.length<1){
-        console.log(carrinhos)
 
        let item = carrinhos.find(ele=>ele.id==id)
        if(item){
         item.quant--
         quantidade.innerHTML=item.quant;
+        if(h3){
+            h3.innerHTML=item.quant
+        }
         if(item.quant<1){
         let fora = carrinhos.findIndex(ele=>ele.id==item.id)
             carrinhos.splice(fora,1)
