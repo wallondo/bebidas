@@ -7,7 +7,9 @@ var qtd = document.getElementById("qtd")
 var sabores = [...document.querySelectorAll(".sabores")]
 var tipo = "";
 var carrinhos = [];
-var carrinho_tela = document.getElementById("carrinho_tela")
+
+var carrinho_tela1 = document.getElementById("carrinho_tela")
+var carrinho_tela = document.getElementById("carrinho_tela2")
 //630/1029
 var bebida = [
     {   
@@ -394,6 +396,7 @@ function carrinho_mostra(){
     if(carrinhos.length<1){
         alert("O seu carrinho está vazio")
     }else{
+        carrinho_tela1.classList.toggle("mostra")
         carrinho_tela.classList.toggle("mostra")
         carrinhos.map((ele,pos)=>{carrinho_tela.innerHTML+=`
               <div class="itens">
@@ -401,15 +404,42 @@ function carrinho_mostra(){
                                 <div class="item_img">
                                     <img src=${ele.img} alt="" srcset="">
                                 </div>
-                                <h3>${ele.quant}</h3>
+                                <h3 id=qtd  data-id=${ele.id}>${ele.quant}</h3>
                                 <h3>Sabor a ${ele.sabor}</h3>
                                 <p>
                                    ${ele.desc}
                                 </p>
+                                <button onclick=menos(event) data-id=${ele.id}>-</button><button  onclick=mais(event) data-id=${ele.id}>+</button>
+                                <div class=bts_carrinhos>
+                                </div>
                         </div>
         `;
         })
     }
+}
+function atualizar_carrinho_tela(params){
+    carrinho_tela.innerHTML="";
+    carrinhos.map((ele,pos)=>{carrinho_tela.innerHTML+=`
+    
+        <div class="itens">
+                          <h2>${ele.bebida}</h2>
+                          <div class="item_img">
+                              <img src=${ele.img} alt="" srcset="">
+                          </div>
+                          <h3 id=qtd  data-id=${ele.id}>${ele.quant}</h3>
+                          <h3>Sabor a ${ele.sabor}</h3>
+                          <p>
+                             ${ele.desc}
+                          </p>
+                          <button onclick=menos(event) data-id=${ele.id}>-</button><button  onclick=mais(event) data-id=${ele.id}>+</button>
+                          <div class=bts_carrinhos>
+                          </div>
+                  </div>
+  `;
+  })
+  if (carrinhos.length<1){
+    carrinho_tela.classList.remove("mostra")
+  }
 }
 
 function tipos(params){
@@ -614,6 +644,7 @@ const mais = (elemento)=>{
 
 
     comprar()
+    
 }
 const menos = (elemento)=>{
     let id = elemento.target.dataset.id;
@@ -629,10 +660,16 @@ const menos = (elemento)=>{
         if(item.quant<1){
         let fora = carrinhos.findIndex(ele=>ele.id==item.id)
             carrinhos.splice(fora,1)
-            quantidade.innerHTML=0;
+            quantidade.innerHTML=item.quant;
             comprar()
+            atualizar_carrinho_tela()
         }
        }
+    }
+    if (carrinhos.length<1){
+        carrinho_quant.innerHTML="";
+        carrinho_tela1.classList.remove("mostra")
+        carrinho_tela.classList.remove("mostra")
     }
 
 }

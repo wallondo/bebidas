@@ -174,7 +174,20 @@ video{
     position: absolute;
     background-color: white;
     top: 0px;
-    right: -101px;
+    right: 0px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.carrinho_tela2{
+    height: 90%;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    top: 0px;
+    right: 0px;
     display: none;
     justify-content: space-around;
     align-items: center;
@@ -195,6 +208,7 @@ video{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 5px 0px;
 }
 
 .item_img{
@@ -207,6 +221,24 @@ video{
 }
 .itens >*{
     text-align: center;
+}
+
+.bts_carrinhos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+.itens button{
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    outline: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
 }
 
 
