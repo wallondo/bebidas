@@ -242,3 +242,51 @@ video{
 }
 
 
+.metodos_de_pagamentos{
+    width: 100%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.metodos_de_pagamentos > div{
+    width: 350px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.metodos_de_pagamentos div h3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.metodos_de_pagamentos div:first-of-type h3 a{
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: flex;
+    background-color: green;
+    justify-content: center;
+    border-radius: 5px;
+    height: 30px;
+    align-items: center;
+    margin-left: 5px;    
+}
+
+.metodos_de_pagamentos div:last-of-type h3 a{
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: flex;
+    background-color: rgb(161, 139, 12);
+    justify-content: center;
+    border-radius: 5px;
+    height: 30px;
+    align-items: center;
+    margin-left: 5px; 
+}
+
+
