@@ -275,10 +275,10 @@ video{
     align-items: center;
     margin-left: 5px;    
     border: none;
+    cursor: pointer;
 }
 
 .metodos_de_pagamentos div:last-of-type h3 button{
-    text-decoration: none;
     color: white;
     width: 100px;
     display: flex;
@@ -289,6 +289,8 @@ video{
     align-items: center;
     margin-left: 5px; 
     border: none;
+    cursor: pointer;
+    text-decoration: line-through 1px red;
 }
 
 
