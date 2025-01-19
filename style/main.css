@@ -263,7 +263,7 @@ video{
     justify-content: center;
     align-items: center;
 }
-.metodos_de_pagamentos div:first-of-type h3 a{
+.metodos_de_pagamentos div:first-of-type h3 button{
     text-decoration: none;
     color: white;
     width: 100px;
@@ -274,9 +274,10 @@ video{
     height: 30px;
     align-items: center;
     margin-left: 5px;    
+    border: none;
 }
 
-.metodos_de_pagamentos div:last-of-type h3 a{
+.metodos_de_pagamentos div:last-of-type h3 button{
     text-decoration: none;
     color: white;
     width: 100px;
@@ -287,6 +288,7 @@ video{
     height: 30px;
     align-items: center;
     margin-left: 5px; 
+    border: none;
 }
 
 

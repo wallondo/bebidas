@@ -7,7 +7,7 @@ var qtd = document.getElementById("qtd")
 var sabores = [...document.querySelectorAll(".sabores")]
 var tipo = "";
 var carrinhos = [];
-
+var whats_bt = document.getElementById("whtas_pay")
 var carrinho_tela1 = document.getElementById("carrinho_tela")
 var carrinho_tela = document.getElementById("carrinho_tela2")
 //630/1029
@@ -149,6 +149,7 @@ var batidos = {
         b_a4:"b_a4.jpg",
         b_a5:"b_a5.jpg",
         b_atxt:"Ananás",
+        b_aid:Math.round(Math.random()*100000000000*1010101),
 
         b_l1:"b_l1.jpg",
         b_l2:"b_l2.jpg",
@@ -156,6 +157,7 @@ var batidos = {
         b_l4:"b_l4.jpg",
         b_l5:"b_l5.jpg",
         b_ltxt:"Limão",
+        b_lid:Math.round(Math.random()*100000000000*1010101),
 
         b_m1:"b_m1.jpg",
         b_m2:"b_m2.jpg",
@@ -163,6 +165,7 @@ var batidos = {
         b_m4:"b_m4.jpg",
         b_m5:"b_m5.jpg",
         b_mtxt:"Morango",
+        b_mid:Math.round(Math.random()*100000000000*1010101),
 
         b_ma1:"b_ma1.jpg",
         b_ma2:"b_ma2.jpg",
@@ -170,6 +173,7 @@ var batidos = {
         b_ma4:"b_ma4.jpg",
         b_ma5:"b_ma5.jpg",
         b_matxt:"Manga",
+        b_maid:Math.round(Math.random()*100000000000*1010101),
 
         b_mac1:"b_mac1.jpg",
         b_mac2:"b_mac2.jpg",
@@ -177,6 +181,7 @@ var batidos = {
         b_mac4:"b_mac4.jpg",
         b_mac5:"b_mac5.jpg",
         b_mactxt:"Maçã",
+        b_macid:Math.round(Math.random()*100000000000*1010101),
 
         b_u1:"b_u1.jpg",
         b_u2:"b_u2.jpg",
@@ -184,7 +189,8 @@ var batidos = {
         b_u4:"b_u4.jpg",
         b_u5:"b_u5.jpg",
         b_utxt:"Uva",
-    
+        b_uid:Math.round(Math.random()*100000000000*1010101),
+
     };
 var xx = [
     {
@@ -219,9 +225,9 @@ function sabor(params){
                                     facere tempora totam excepturi eligendi molestias tempore rerum.
                                 </p>
                                 <div class=bts_batidos>
-                                    <button style='background-color:rgb(109, 107, 3)'>+</button>
+                                    <button style='background-color:rgb(109, 107, 3)' onclick=batidos_mais(${batidos.b_aid})>+</button>
                                         <h3>0</h3>
-                                    <button style='background-color:rgb(109, 107, 3)'>-</button>
+                                    <button style='background-color:rgb(109, 107, 3)' onclick=batidos_menos(${batidos.b_aid})>-</button>
                                 </div>
                             </div>
                         </div>
@@ -681,4 +687,23 @@ const menos = (elemento)=>{
     }
 
 }
+const batidos_mais = ()=>{
+    console.log("batido ativo")
+    batidos
+}
+const batidos_menos = ()=>{
+
+}
+whats_bt.addEventListener("click",(evt)=>{
+    let compra = [];
+    if(carrinhos.length>0){
+        carrinhos.map((pro,pos)=>{
+            compra.push(`Bebida : ${pro.bebida} ;%20 Sabor : ${pro.sabor} ;%20 Quantidade : ${pro.quant} %0A`)
+        })
+    }
+
+    let sms = compra.join(",")
+    window.open(`https://wa.me/244941137038?text=Saudações carissímos! %0A Gostaria de adquirir esses items : %0A ${sms}`,"_blank")
+})
+
 tipos();
