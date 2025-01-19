@@ -142,56 +142,62 @@ var alcool = [
 var sem_alcool = [
 
 ];
-var batidos = {
-        b_a1:"b_a1.jpg",
-        b_a2:"b_a2.jpg",
-        b_a3:"b_a3.jpg",
-        b_a4:"b_a4.jpg",
-        b_a5:"b_a5.jpg",
-        b_atxt:"Ananás",
-        b_aid:Math.round(Math.random()*100000000000*1010101),
-
+var batidos = [
+        {
+            b_a1:"b_a1.jpg",
+            b_a2:"b_a2.jpg",
+            b_a3:"b_a3.jpg",
+            b_a4:"b_a4.jpg",
+            b_a5:"b_a5.jpg",
+            b_atxt:"Ananás",
+            b_aid:Math.round(Math.random()*100000000000*1010101)
+        },
+        {
         b_l1:"b_l1.jpg",
         b_l2:"b_l2.jpg",
         b_l3:"b_l3.jpg",
         b_l4:"b_l4.jpg",
         b_l5:"b_l5.jpg",
         b_ltxt:"Limão",
-        b_lid:Math.round(Math.random()*100000000000*1010101),
-
-        b_m1:"b_m1.jpg",
-        b_m2:"b_m2.jpg",
-        b_m3:"b_m3.jpg",
-        b_m4:"b_m4.jpg",
-        b_m5:"b_m5.jpg",
-        b_mtxt:"Morango",
-        b_mid:Math.round(Math.random()*100000000000*1010101),
-
-        b_ma1:"b_ma1.jpg",
-        b_ma2:"b_ma2.jpg",
-        b_ma3:"b_ma3.jpg",
-        b_ma4:"b_ma4.jpg",
-        b_ma5:"b_ma5.jpg",
-        b_matxt:"Manga",
-        b_maid:Math.round(Math.random()*100000000000*1010101),
-
+        b_lid:Math.round(Math.random()*100000000000*1010101)
+        },
+        {
+            b_m1:"b_m1.jpg",
+            b_m2:"b_m2.jpg",
+            b_m3:"b_m3.jpg",
+            b_m4:"b_m4.jpg",
+            b_m5:"b_m5.jpg",
+            b_mtxt:"Morango",
+            b_mid:Math.round(Math.random()*100000000000*1010101)
+        },
+        {
+            b_ma1:"b_ma1.jpg",
+            b_ma2:"b_ma2.jpg",
+            b_ma3:"b_ma3.jpg",
+            b_ma4:"b_ma4.jpg",
+            b_ma5:"b_ma5.jpg",
+            b_matxt:"Manga",
+            b_maid:Math.round(Math.random()*100000000000*1010101)
+        },
+        {
         b_mac1:"b_mac1.jpg",
         b_mac2:"b_mac2.jpg",
         b_mac3:"b_mac3.jpg",
         b_mac4:"b_mac4.jpg",
         b_mac5:"b_mac5.jpg",
         b_mactxt:"Maçã",
-        b_macid:Math.round(Math.random()*100000000000*1010101),
-
+        b_macid:Math.round(Math.random()*100000000000*1010101)
+        },
+        {
         b_u1:"b_u1.jpg",
         b_u2:"b_u2.jpg",
         b_u3:"b_u3.jpg",
         b_u4:"b_u4.jpg",
         b_u5:"b_u5.jpg",
         b_utxt:"Uva",
-        b_uid:Math.round(Math.random()*100000000000*1010101),
-
-    };
+        b_uid:Math.round(Math.random()*100000000000*1010101)
+        }
+    ];
 var xx = [
     {
         b_a2:"b_a2.jpg",
@@ -207,27 +213,25 @@ function sabor(params){
             	  <section class=batidos>
                         <div>
                             <div class=options>
-                                <img src=public/bebidas/${batidos.b_a2} alt=>
-                                <img src=public/bebidas/${batidos.b_a3} alt=>
-                                <img src=public/bebidas/${batidos.b_a4} alt=>
-                                <img src=public/bebidas/${batidos.b_a5} alt=>
+                                <img src=public/bebidas/${batidos[0].b_a2} alt=>
+                                <img src=public/bebidas/${batidos[0].b_a3} alt=>
+                                <img src=public/bebidas/${batidos[0].b_a4} alt=>
+                                <img src=public/bebidas/${batidos[0].b_a5} alt=>
                             </div>
                         </div>
                         <div class=img_batido>
-                            <img src=public/bebidas/${batidos.b_a1} alt= srcset=>
+                            <img src=public/bebidas/${batidos[0].b_a1} alt= srcset=>
                         </div>
                         <div>
                             <div class=description_batido>
-                                <h3 style='color:rgb(236, 240, 6)'>O Melhor batido de ${batidos.b_atxt}</h3>
+                                <h3 style='color:rgb(236, 240, 6)'>O Melhor batido de ${batidos[0].b_atxt}</h3>
                                 <p style='color:rgb(209, 165, 22)'>
-                                    Lorem ipsum dolor sit amet consectetur, 
-                                    adipisicing elit. Quaerat asperiores blanditiis,
-                                    facere tempora totam excepturi eligendi molestias tempore rerum.
+                                    Uma mistura refrescante e nutritiva, o batido de abacaxi combina o sabor doce e ácido da fruta com um toque de cremosidade. Rico em vitamina C, auxilia na digestão e fortalece o sistema imunológico. Perfeito para um lanche leve, saudável e cheio de energia. Refresque-se com essa bebida deliciosa e revitalizante!.
                                 </p>
                                 <div class=bts_batidos>
-                                    <button style='background-color:rgb(109, 107, 3)' onclick=batidos_mais(${batidos.b_aid})>+</button>
-                                        <h3>0</h3>
-                                    <button style='background-color:rgb(109, 107, 3)' onclick=batidos_menos(${batidos.b_aid})>-</button>
+                                    <button style='background-color:rgb(109, 107, 3)' onclick=batidos_mais(event)>+</button>
+                                        <h3 data-id=${batidos[0].b_aid}>0</h3>
+                                    <button style='background-color:rgb(109, 107, 3)' onclick=batidos_menos(event)>-</button>
                                 </div>
                             </div>
                         </div>
@@ -238,27 +242,25 @@ function sabor(params){
         <section class=batidos>
               <div>
                   <div class=options>
-                      <img src=public/bebidas/${batidos.b_l2} alt=>
-                      <img src=public/bebidas/${batidos.b_l3} alt=>
-                      <img src=public/bebidas/${batidos.b_l4} alt=>
-                      <img src=public/bebidas/${batidos.b_l5} alt=>
+                      <img src=public/bebidas/${batidos[1].b_l2} alt=>
+                      <img src=public/bebidas/${batidos[1].b_l3} alt=>
+                      <img src=public/bebidas/${batidos[1].b_l4} alt=>
+                      <img src=public/bebidas/${batidos[1].b_l5} alt=>
                   </div>
               </div>
               <div class=img_batido>
-                  <img src=public/bebidas/${batidos.b_l1} alt= srcset=>
+                  <img src=public/bebidas/${batidos[1].b_l1} alt= srcset=>
               </div>
               <div>
                   <div class=description_batido>
-                      <h3 style='color: rgb(168, 231, 21)'>O Melhor batido de  ${batidos.b_ltxt}</h3>
+                      <h3 style='color: rgb(168, 231, 21)'>O Melhor batido de  ${batidos[1].b_ltxt}</h3>
                       <p style='color:rgb(90, 99, 5)'>
-                          Lorem ipsum dolor sit amet consectetur, 
-                          adipisicing elit. Quaerat asperiores blanditiis,
-                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                        Refrescante e cítrico, o batido de limão traz um sabor vibrante e revigorante. Rico em vitamina C, ajuda a fortalecer o sistema imunológico e promove a digestão. Ideal para quem busca uma bebida leve e desintoxicante. Uma opção perfeita para começar o dia com energia e frescor!
                       </p>
                       <div class=bts_batidos>
-                          <button style='background-color: rgb(73, 85, 3)'>+</button>
-                              <h3>0</h3>
-                          <button style='background-color: rgb(73, 85, 3)'>-</button>
+                          <button style='background-color: rgb(73, 85, 3)'onclick=batidos_mais(event)>+</button>
+                              <h3 data-id=${batidos[1].b_lid}>0</h3>
+                          <button style='background-color: rgb(73, 85, 3)'onclick=batidos_menos(event)>-</button>
                       </div>
                   </div>
               </div>
@@ -269,27 +271,25 @@ function sabor(params){
         <section class=batidos>
               <div>
                   <div class=options>
-                      <img src=public/bebidas/${batidos.b_mac2} alt=>
-                      <img src=public/bebidas/${batidos.b_mac3} alt=>
-                      <img src=public/bebidas/${batidos.b_mac4} alt=>
-                      <img src=public/bebidas/${batidos.b_mac5} alt=>
+                      <img src=public/bebidas/${batidos[4].b_mac2} alt=>
+                      <img src=public/bebidas/${batidos[4].b_mac3} alt=>
+                      <img src=public/bebidas/${batidos[4].b_mac4} alt=>
+                      <img src=public/bebidas/${batidos[4].b_mac5} alt=>
                   </div>
               </div>
               <div class=img_batido>
-                  <img src=public/bebidas/${batidos.b_mac1} alt=>
+                  <img src=public/bebidas/${batidos[4].b_mac1} alt=>
               </div>
               <div>
                   <div class=description_batido>
-                      <h3 style='color: rgb(81, 231, 21)'>O Melhor batido de ${batidos.b_mactxt}</h3>
+                      <h3 style='color: rgb(81, 231, 21)'>O Melhor batido de ${batidos[4].b_mactxt}</h3>
                       <p style='color: rgb(13, 99, 5)'>
-                          Lorem ipsum dolor sit amet consectetur, 
-                          adipisicing elit. Quaerat asperiores blanditiis,
-                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                         O batido de maçã é uma opção deliciosa e saudável, combinando o sabor doce e suave da fruta com uma textura cremosa. Rico em fibras e antioxidantes, auxilia na digestão e no controle do colesterol. Uma bebida refrescante e nutritiva, ideal para um lanche ou café da manhã. Perfeito para quem busca energia e bem-estar de forma natural!
                       </p>
                       <div class=bts_batidos>
-                          <button style='background-color: rgb(9, 46, 2)'>+</button>
-                              <h3>0</h3>
-                          <button style='background-color: rgb(9, 46, 2)'>-</button>
+                          <button style='background-color: rgb(9, 46, 2)'onclick=batidos_mais(event)>+</button>
+                              <h3 data-id=${batidos[4].b_macid}>0</h3>
+                          <button style='background-color: rgb(9, 46, 2)'onclick=batidos_menos(event)>-</button>
                       </div>
                   </div>
               </div>
@@ -300,27 +300,25 @@ function sabor(params){
         <section class=batidos>
               <div>
                   <div class=options>
-                      <img src=public/bebidas/${batidos.b_ma2} alt=>
-                      <img src=public/bebidas/${batidos.b_ma3} alt=>
-                      <img src=public/bebidas/${batidos.b_ma4} alt=>
-                      <img src=public/bebidas/${batidos.b_ma5} alt=>
+                      <img src=public/bebidas/${batidos[3].b_ma2} alt=>
+                      <img src=public/bebidas/${batidos[3].b_ma3} alt=>
+                      <img src=public/bebidas/${batidos[3].b_ma4} alt=>
+                      <img src=public/bebidas/${batidos[3].b_ma5} alt=>
                   </div>
               </div>
               <div class=img_batido>
-                  <img src=public/bebidas/${batidos.b_ma1} alt= srcset=>
+                  <img src=public/bebidas/${batidos[3].b_ma1} alt= srcset=>
               </div>
               <div>
                   <div class=description_batido>
-                      <h3 style='color: rgb(231, 182, 21)'>O Melhor batido de  ${batidos.b_matxt}</h3>
+                      <h3 style='color: rgb(231, 182, 21)'>O Melhor batido de  ${batidos[3].b_matxt}</h3>
                       <p style='color: rgb(99, 92, 5)'>
-                          Lorem ipsum dolor sit amet consectetur, 
-                          adipisicing elit. Quaerat asperiores blanditiis,
-                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                        O batido de manga é uma explosão de sabor tropical, suave e doce, que traz frescor e cremosidade. Rico em vitamina A e C, ele fortalece o sistema imunológico e melhora a saúde da pele. Perfeito para hidratar e dar energia durante o dia. Uma bebida deliciosa e nutritiva que transporta você direto para o verão!
                       </p>
                       <div class=bts_batidos>
-                          <button style='background-color: rgb(59, 56, 2)'>+</button>
-                              <h3>0</h3>
-                          <button style='background-color: rgb(59, 56, 2)'>-</button>
+                          <button style='background-color: rgb(59, 56, 2)' onclick=batidos_mais(event)>+</button>
+                              <h3 data-id=${batidos[3].b_maid}>0</h3>
+                          <button style='background-color: rgb(59, 56, 2)' onclick=batidos_menos(event)>-</button>
                       </div>
                   </div>
               </div>
@@ -331,27 +329,25 @@ function sabor(params){
         <section class=batidos>
               <div>
                   <div class=options>
-                      <img src=public/bebidas/${batidos.b_u2} alt=>
-                      <img src=public/bebidas/${batidos.b_u3} alt=>
-                      <img src=public/bebidas/${batidos.b_u4} alt=>
-                      <img src=public/bebidas/${batidos.b_u5} alt=>
+                      <img src=public/bebidas/${batidos[5].b_u2} alt=>
+                      <img src=public/bebidas/${batidos[5].b_u3} alt=>
+                      <img src=public/bebidas/${batidos[5].b_u4} alt=>
+                      <img src=public/bebidas/${batidos[5].b_u5} alt=>
                   </div>
               </div>
               <div class=img_batido>
-                  <img src=public/bebidas/${batidos.b_u1} alt= srcset=>
+                  <img src=public/bebidas/${batidos[5].b_u1} alt= srcset=>
               </div>
               <div>
                   <div class=description_batido>
-                      <h3 style='color: rgb(3, 12, 90)'>O Melhor batido de  ${batidos.b_utxt}</h3>
+                      <h3 style='color: rgb(3, 12, 90)'>O Melhor batido de  ${batidos[5].b_utxt}</h3>
                       <p style='color: rgb(3, 17, 77)'>
-                          Lorem ipsum dolor sit amet consectetur, 
-                          adipisicing elit. Quaerat asperiores blanditiis,
-                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                         O batido de uva oferece um sabor doce e refrescante, perfeito para quem busca uma bebida energética e saudável. Rico em antioxidantes, ele ajuda a combater os radicais livres e promove a saúde cardiovascular. Uma ótima escolha para um lanche nutritivo e revitalizante. Desfrute do frescor e dos benefícios das uvas em cada gole!
                       </p>
                       <div class=bts_batidos>
-                          <button style='background-color: rgb(6, 1, 44)'>+</button>
-                              <h3>0</h3>
-                          <button style='background-color: rgb(6, 1, 44)'>-</button>
+                          <button style='background-color: rgb(6, 1, 44)' onclick=batidos_mais(event)>+</button>
+                              <h3 data-id=${batidos[5].b_uid}>0</h3>
+                          <button style='background-color: rgb(6, 1, 44)' onclick=batidos_menos(event)>-</button>
                       </div>
                   </div>
               </div>
@@ -362,27 +358,25 @@ function sabor(params){
         <section class=batidos>
               <div>
                   <div class=options>
-                      <img src=public/bebidas/${batidos.b_m2} alt=>
-                      <img src=public/bebidas/${batidos.b_m3} alt=>
-                      <img src=public/bebidas/${batidos.b_m4} alt=>
-                      <img src=public/bebidas/${batidos.b_m5} alt=>
+                      <img src=public/bebidas/${batidos[2].b_m2} alt=>
+                      <img src=public/bebidas/${batidos[2].b_m3} alt=>
+                      <img src=public/bebidas/${batidos[2].b_m4} alt=>
+                      <img src=public/bebidas/${batidos[2].b_m5} alt=>
                   </div>
               </div>
               <div class=img_batido>
-                  <img src=public/bebidas/${batidos.b_m1} alt= srcset=>
+                  <img src=public/bebidas/${batidos[2].b_m1} alt= srcset=>
               </div>
               <div>
                   <div class=description_batido>
-                      <h3 style='color: rgb(245, 39, 73)'>O Melhor batido de  ${batidos.b_mtxt}</h3>
+                      <h3 style='color: rgb(245, 39, 73)'>O Melhor batido de  ${batidos[2].b_mtxt}</h3>
                       <p style='color: rgb(119, 6, 6)'>
-                          Lorem ipsum dolor sit amet consectetur, 
-                          adipisicing elit. Quaerat asperiores blanditiis,
-                          facere tempora totam excepturi eligendi molestias tempore rerum.
+                          O batido de morango é uma opção doce e cremosa, repleta de sabor e frescor. Rico em vitamina C e antioxidantes, ele fortalece o sistema imunológico e combate os radicais livres. Perfeito para um lanche nutritivo ou um café da manhã leve. Refresque-se com essa bebida deliciosa e cheia de benefícios para a saúde!
                       </p>
                       <div class=bts_batidos>
-                          <button style='background-color: rgb(43, 3, 3)'>+</button>
-                              <h3>0</h3>
-                          <button style='background-color: rgb(43, 3, 3)'>-</button>
+                          <button style='background-color: rgb(43, 3, 3)' onclick=batidos_mais(event)>+</button>
+                              <h3 data-id=${batidos[2].b_mid}>0</h3>
+                          <button style='background-color: rgb(43, 3, 3)' onclick=batidos_menos(event)>-</button>
                       </div>
                   </div>
               </div>
@@ -695,13 +689,16 @@ const menos = (elemento)=>{
     }
 
 }
-const batidos_mais = ()=>{
-    console.log("batido ativo")
-    batidos
-}
-const batidos_menos = ()=>{
+const batidos_mais = (params)=>{
+    let h3 = params.target.parentNode.firstElementChild.nextElementSibling;
+    alert("Sinto muito , mas os batidos estão fora de serviço até ao momento")
 
 }
+const batidos_menos = (params)=>{
+    alert("Sinto muito , mas os batidos estão fora de serviço até ao momento")
+    
+}
+
 whats_bt.addEventListener("click",(evt)=>{
     let compra = [];
     if(carrinhos.length>0){
