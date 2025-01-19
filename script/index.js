@@ -397,7 +397,6 @@ sabores.map((ele,pos)=>{
 })
 
 function carrinho_mostra(){
-    console.log(carrinhos)
     carrinho_tela.innerHTML="";
     if(carrinhos.length<1){
         alert("O seu carrinho está vazio")
@@ -620,21 +619,30 @@ function  comprar(){
 }
 const mais = (elemento)=>{
     let id = elemento.target.getAttribute("data-id")
+    var spans = document.querySelectorAll(".description h3")
+    let h3 = null;
     let quantidade = elemento.target.parentNode.firstElementChild.nextElementSibling.nextElementSibling;
     let bebida_ = {};
+
     bebida.filter((beb,pos)=>{
         if(beb.id==id){ 
             bebida_ = beb
+        }
+    })
+    spans.forEach((sp,po)=>{
+            if(sp.dataset.id==id){
+            h3 = sp
         }
     })
     if (carrinhos.length>0){
         let item = carrinhos.find(it=>it.id==id)
         // let item = carrinhos.find((it)=>{return it.id==id}) tambem deu
         if(item){
-            console.log(item)
             item.quant++;
-            console.log(carrinhos)
             quantidade.innerHTML=item.quant;
+            if(h3){
+                h3.innerHTML=item.quant;
+            }
         }else{
             carrinhos.push({bebida:bebida_.nome,sabor:bebida_.sabor,id:bebida_.id,quant:1,img:bebida_.img})
             quantidade.innerHTML=1;
